@@ -1,0 +1,32 @@
+{
+    "name": "zver/php-demo",
+    "authors": [
+        {
+            "name": "Александр Свиридовский",
+            "email": "zver25@gmail.com"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^9.0",
+        "psr/http-message": "^1.0",
+        "psr/container": "^1.0",
+        "psr/http-factory": "^1.0",
+        "psr/log": "^1.1",
+        "laminas/laminas-diactoros": "^2.2",
+        "monolog/monolog": "^2.0",
+        "laminas/laminas-stratigility": "^3.2",
+        "laminas/laminas-httphandlerrunner": "^1.1",
+        "psr/http-server-middleware": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "framework\\": "src/framework/",
+            "app\\": "src/app/",
+            "tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "serve": "php -S 0.0.0.0:8080 -t public",
+        "test": "phpunit --colors=always"
+    }
+}
